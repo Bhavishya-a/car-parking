@@ -68,6 +68,7 @@ function my_keydown(e)
 function up()
 {
 	if (greencar_y>=0) {
+		greencar_y = greencar_y-10;
         console.log("when up arrow is pressed, x="+greencar_x+"and y="+greencar_y);
         uploadBackground();
         uploadgreencar();
@@ -76,7 +77,8 @@ function up()
 
 function down()
 {
-	if (greencar_y>=400) {
+	if (greencar_y>=350) {
+		greencar_y= greencar_y+10;
         console.log("when up arrow is pressed, x="+greencar_x+"and y="+greencar_y);
         uploadBackground();
         uploadgreencar();
@@ -85,7 +87,7 @@ function down()
 
 function left()
 {
-	if (greencar_x>=10){
+	if (greencar_x>=0){
         greencar_x=greencar_x-10;
         console.log("when left arrow is pressed, x="+greencar_x+"and y="+greencar_y);
         uploadBackground();
@@ -95,8 +97,8 @@ function left()
 
 function right()
 {
-	if (greencar_x>=800){
-        greencar_x=greencar_x-10;
+	if (greencar_x>=730){
+        greencar_x=greencar_x+10;
         console.log("when left arrow is pressed, x="+greencar_x+"and y="+greencar_y);
         uploadBackground();
         uploadgreencar();
